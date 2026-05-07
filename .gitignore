@@ -1,0 +1,36 @@
+# Виртуальное окружение
+venv/
+.venv/
+env/
+.env/
+
+# Кэш и байт-код
+__pycache__/
+*.py[cod]
+*.so
+
+# Файлы IDE
+.vscode/
+.idea/
+*.swp
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
+
+# Логи и базы данных
+*.log
+*.db
+*.sqlite3
+
+# Переменные окружения
+.env
+config.py
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Файлы тестов
+.pytest_cache/
+.coverage
+htmlcov/
