@@ -1,2 +1,6 @@
-# smart-yard
-Smart Home IoT System with LoRaMesh and MQTT
+# Project Structure
+
+* `device_node.py` - work with sensors and devices
+* `logic.py` - system logic
+* `bridge.py` - bridge between components
+* `api_server.py` - REST API server
