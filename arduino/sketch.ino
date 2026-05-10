@@ -19,9 +19,10 @@ void loop() {
       digitalWrite(13, HIGH);
     } else if (command == "0") {
       digitalWrite(13, LOW);
-      digitalWrite(8, LOW);
     } else if (command =="buzz") {
       digitalWrite(8,HIGH);
+      delay(300);
+      digitalWrite(8,LOW);
     }
     
   }
