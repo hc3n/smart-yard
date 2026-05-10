@@ -36,11 +36,14 @@ def on_message(client, userdata, msg):
         # реагируем на изменение освещённости и передаем управляющую команду
         if payload == "DARK":
             print("Sensor DARK -> sending LED ON to Lora")
-            client.publish(MQTT_TOPIC_TX, CMD_LED_ON)   # "Yes"
+            client.publish(MQTT_TOPIC_TX, CMD_LED_ON)
+            client.publish(MQTT_TOPIC_ACTION,CMD_LED_ON)
+
         elif payload == "LIGHT":
             print("Sensor LIGHT -> sending LED OFF to Lora")
             client.publish(MQTT_TOPIC_TX, CMD_LED_OFF)  # "No"
-
+            client.publish(MQTT_TOPIC_ACTION,CMD_LED_OFF)
+            
 client.on_message = on_message
 client.connect(MQTT_BROKER,1883,60)
 client.subscribe(MQTT_TOPIC_SENSOR)
