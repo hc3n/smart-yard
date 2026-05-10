@@ -71,13 +71,6 @@ while True:
         print(f"[STATE]: {state}")
         client.publish(MQTT_TOPIC_SENSOR,state) # публикуем в топик состояние датчика
 
-        
-        ### ЛОКАЛЬНАЯ ЛОГИКА
-        # решения о состоянии принимаются только на основе показаний датчика.
-        if state == "DARK":
-            ser.write("1\n".encode())
-        else:
-            ser.write("0\n".encode())
         last_state = state
 
 
