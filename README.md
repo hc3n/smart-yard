@@ -8,3 +8,9 @@
 ## C4 model (context layer)
 <img width="881" height="876" alt="C4_LVL1_NEW drawio" src="https://github.com/user-attachments/assets/c86f0ce7-4115-4cab-93da-f13ab8988607" />
 
+## General template for broker topic structure
+* {cluster}/{category}/{device}/{action/state}
+* cluster - is any room/space/object
+* category - sensor/system/lora/cmd
+* device - specific device
+  
