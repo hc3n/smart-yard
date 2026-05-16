@@ -6,11 +6,13 @@
 # Одновременно прослушивает входящие из LoRa сети и ждет команды: "ON" - включить свет, "OFF" - выключить свет, "BUZZ" - короткий звуковой сигнал.
 # не использует mqtt, напрямую работает с meshtastic модулем через pub/sub - meshtastic
 
+
 import serial
 import meshtastic.serial_interface
 from pubsub import pub
 import time
 
+NODE_ID = "NODE_1" # ID или имя данного узла
 
 # Подключаемся к Meshtastic устройству на удалённом узле 
 MESHTASTIC_PORT = 'COM5'          # порт Meshtastic модуля
@@ -45,7 +47,7 @@ while True:
         state = "DARK" if light_value < THRESHOLD else "LIGHT"
         if state != last_state:
             print(f"Sensor: {light_value} -> {state}")
-            interface.sendText(state)          # отправка в LoRa сеть 
+            interface.sendText(f"{NODE_ID}:{state}")    # отправка в LoRa сеть 
             last_state = state
     except:
         pass
