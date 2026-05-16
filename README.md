@@ -13,4 +13,8 @@
 * cluster - is any room/space/object
 * category - sensor/system/lora/cmd
 * device - specific device
+
+## Web UI (Dashboard)
+<img width="1280" height="911" alt="telegram-cloud-photo-size-2-5208470796953656815-y" src="https://github.com/user-attachments/assets/713308fc-6ebc-45ac-bdd2-0268387b95a3" />
+
   
